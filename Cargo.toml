@@ -1,6 +1,6 @@
 [package]
 name = "csgo-gsi"
-version = "0.3.0"
+version = "0.4.0"
 authors = ["Melody Horn <melody@boringcactus.com>"]
 edition = "2018"
 description = "rust library for CS:GO's Game State Integration API"
@@ -16,17 +16,16 @@ categories = ["api-bindings"]
 maintenance = { status = "experimental" }
 
 [dependencies]
-serde = { version = "1.0.115", features = ["derive"] }
+serde = { version = "1.0.195", features = ["derive"] }
 fehler = "1.0.0"
-vdf-serde = "0.3.0"
-gotham = "0.5.0"
-gotham_derive = "0.5.0"
-serde_json = "1.0.57"
-tokio = { version = "0.2.5", features = ["full"] }
+vdf-serde = { version = "0.3.0", path = "../vdf-serde" }
+gotham = "0.7.2"
+gotham_derive = "0.7.1"
+serde_json = "1.0.111"
+tokio = { version = "1.35.1", features = ["full"] }
 rhai = { version = "0.18.3", optional = true }
-
-[target.'cfg(windows)'.dependencies]
-registry = "1.0.0-alpha.4"
+futures = "0.3.30"
+log = "0.4.20"
 
 [dev-dependencies]
 version-sync = "0.9.1"

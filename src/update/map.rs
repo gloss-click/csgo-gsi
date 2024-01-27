@@ -8,8 +8,6 @@ use serde::{Serialize, Deserialize};
 #[derive(Clone, Debug, Deserialize, Serialize)]
 #[serde(deny_unknown_fields)]
 pub struct Map {
-    /// current number of spectators
-    pub current_spectators: u64,
     /// game mode
     pub mode: Mode,
     /// map name
@@ -23,8 +21,6 @@ pub struct Map {
     /// who won which round and how
     #[serde(default)]
     pub round_wins: HashMap<u64, RoundWin>,
-    /// number of souvenirs dropped so far this map (presumably)
-    pub souvenirs_total: u64,
     /// counter-terrorist team info
     pub team_ct: Team,
     /// terrorist team info

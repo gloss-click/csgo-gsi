@@ -32,7 +32,6 @@ extern crate gotham_derive;
 
 mod config;
 mod error;
-mod install_dir;
 mod server;
 pub mod update;
 

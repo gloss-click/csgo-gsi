@@ -39,9 +39,9 @@ pub struct Update {
     /// round info
     pub round: Option<Round>,
     #[serde(skip_serializing, default)]
-    added: IgnoredAny,
+    _added: IgnoredAny,
     #[serde(skip_serializing, default)]
-    previously: IgnoredAny,
+    _previously: IgnoredAny,
 }
 
 /// information about the GSI info provider (CS:GO itself)
@@ -175,14 +175,12 @@ mod rhai_package {
         make_stringable!(Team as Debug);
 
         make_debug!(Map);
-        make_getter!(Map:current_spectators);
         make_getter!(Map:mode);
         make_getter!(Map:name.into_immutable());
         make_getter!(Map:num_matches_to_win_series);
         make_getter!(Map:phase);
         make_getter!(Map:round);
         make_getter!(Map:round_wins.into_rhai_map());
-        make_getter!(Map:souvenirs_total);
         make_getter!(Map:team_ct);
         make_getter!(Map:team_t);
 

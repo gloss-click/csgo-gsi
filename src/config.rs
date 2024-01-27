@@ -199,7 +199,7 @@ impl From<GSIConfigBuilder> for GSIConfig {
             timeout: builder.timeout.unwrap_or_else(|| Duration::from_secs_f64(1.1)),
             buffer: builder.buffer.unwrap_or_else(|| Duration::from_secs_f64(0.1)),
             throttle: builder.throttle.unwrap_or_else(|| Duration::from_secs_f64(1.0)),
-            heartbeat: builder.throttle.unwrap_or_else(|| Duration::from_secs(60)),
+            heartbeat: builder.heartbeat.unwrap_or_else(|| Duration::from_secs(60)),
             auth: builder.auth,
             precision_time: builder.precision_time.unwrap_or(2),
             precision_position: builder.precision_position.unwrap_or(2),
