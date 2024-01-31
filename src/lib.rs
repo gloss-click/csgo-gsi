@@ -27,9 +27,6 @@
 #![deny(missing_docs)]
 #![doc(html_root_url = "https://docs.rs/csgo-gsi/0.3.0")]
 
-#[macro_use]
-extern crate gotham_derive;
-
 mod config;
 mod error;
 mod server;
@@ -37,5 +34,5 @@ pub mod update;
 
 pub use config::{Subscription, GSIConfigBuilder, GSIConfig};
 pub use error::Error;
-pub use server::GSIServer;
+pub use server::{GSIServer, CloseEvent};
 pub use update::Update;

@@ -39,9 +39,9 @@ pub struct Update {
     /// round info
     pub round: Option<Round>,
     #[serde(skip_serializing, default)]
-    _added: IgnoredAny,
+    added: IgnoredAny,
     #[serde(skip_serializing, default)]
-    _previously: IgnoredAny,
+    previously: IgnoredAny,
 }
 
 /// information about the GSI info provider (CS:GO itself)
